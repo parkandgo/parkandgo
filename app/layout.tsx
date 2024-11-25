@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Valet- und Parkservice leicht bestellt!",
+  title: "Valet- und Parkservice leicht bestellt",
   description: "Buchen Sie jetzt bequem online Ihren Valet- und Parkservice. Wir holen Ihr Fahrzeug ab, bringen es zurück, reinigen es auf Wunsch und bieten zusätzliche Services wie Tanken – alles für Ihre maximale Entspannung.",
 
 };
