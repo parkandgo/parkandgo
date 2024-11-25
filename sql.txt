@@ -1,0 +1,19 @@
+-- Tabelle löschen
+DROP TABLE orders;
+
+-- Neue Tabelle erstellen
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    pickup_date DATE NOT NULL,           
+    pickup_time TIME NOT NULL,          
+    dropoff_date DATE NOT NULL,          
+    dropoff_time TIME NOT NULL,          
+    meeting_point TEXT NOT NULL,
+    extras TEXT,
+    total_price NUMERIC(10, 2) NOT NULL,
+    email TEXT NOT NULL,
+    did_pay BOOLEAN DEFAULT FALSE,       -- Neue Spalte für Zahlungsstatus
+    session_id TEXT,                     -- Session ID für die Stripe-Session
+    payment_method TEXT,                -- Neue Spalte für Zahlungsmethode (z.B. Visa, MasterCard)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Erstellungszeitpunkt der Bestellung
+);
